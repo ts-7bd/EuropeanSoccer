@@ -26,26 +26,32 @@ The chosen DWH is the data vault. It is built with two python scripts on my AWS 
 Data are extracted from the sql-database and loaded into the data vault. <br>
 
 <i> fifa_dwh_lib.py  </i>  <br>
-Data  <br>
-Pakete <br>
+ - About: module for fifa_data_vault.py. It contains subroutines for creating hubs, satelites, and links, inserting into existing hubs and creating hashkeys. <br>
+ - Code: Python 3.6 <br>
+ - Dependencies: Postgres SQL and connection to AWS server <br>
+ - Packages: numpy, pandas, datetime, string, sqlalchemy, psycopg2, hashlib, sqlite3 <br>
  
 <i> fifa_data_vault.py </i> <br>
-Data <br>
-Pakete <br>
+ - About: This program extracts  european soccer data from the database database.sqlite. The aim is to set up the DWH of kind Data Vault on AWS.
+ - Code: Python 3.6 <br>
+ - Dependencies: Postgres SQL and connection to AWS server <br>
+ - Data: database.sqlite <br>
+ - Pakete: numpy, pandas, datetime, string, sqlalchemy, psycopg2, hashlib, sqlite3, fifa_dwh_lib <br>
 
- <br> 
+<br> 
 
 <b> Analysis of game results </b> 
 
-Analysis of 25979 soccer games in 11 European leagues between the seasons 2008/2009 and 2015/2016. Four tables are nedded  from the European soccer database. These are leque, country, match, and team. <br>
-The analysis consists of three major parts. <br>
+Analysis of 25979 soccer games in 11 European leagues between the seasons 2008/2009 and 2015/2016. Four tables are nedded  from the European soccer database. These are leque, country, match, and team. The analysis consists of three major parts. <br>
 - imvestigation of game results: most likely results, relation between home--team victory and away-team victory, number of goals
 - ivestigation of home-team advantage for each legue and season including statistical evaluation with t-tesst
 - performance of Hamburger SV in comparison to FC Bayern Munich: points and goals 
  
 <i> soccer_game_results.ipynb </i>  <br>
-Data: database.sqlite.zip  <br>
-Packages: os, sys, zipfile, numpy, pandas, datetime, time, scipy, statsmodels, sqlite3, string, seaborn, matplotlib  <br>
+ - About: Analysis of soccer game results, home-team advantage, and performance of Hamburger SV in comparison to FC Bayern Munich
+ - Code: Jupyter Notebook 6.1 <br>
+ - Data: database.sqlite.zip  <br>
+ - Packages: os, sys, zipfile, numpy, pandas, datetime, time, scipy, statsmodels, sqlite3, string, seaborn, matplotlib  <br>
 
  <br> 
   
